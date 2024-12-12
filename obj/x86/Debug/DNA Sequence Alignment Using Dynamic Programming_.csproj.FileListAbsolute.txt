@@ -1,0 +1,3 @@
+C:\Users\Admin\Desktop\DNA Sequence Alignment Using Dynamic Programming_\obj\x86\Debug\DNA Sequence Alignment Using Dynamic Programming_.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DNA Sequence Alignment Using Dynamic Programming_\obj\x86\Debug\DNA_Sequence_Alignment_Using_Dynamic_Programming_.Form1.resources
+C:\Users\Admin\Desktop\DNA Sequence Alignment Using Dynamic Programming_\obj\x86\Debug\DNA Sequence Alignment Using Dynamic Programming_.csproj.GenerateResource.cache
