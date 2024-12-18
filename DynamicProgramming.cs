@@ -42,4 +42,36 @@ namespace DNA_Sequence_Alignment_Using_Dynamic_Programming_
             return Matrix;
 
         }
+
+         public static Cell Get_Max(int i, int j, string Seq1, string Seq2, Cell[,] Matrix,int Similar,int NonSimilar,int GapPenality)
+         {
+             Cell Temp = new Cell();
+             int Sim;
+             int Gap = GapPenality;
+             if (Seq1[i] == Seq2[j])
+                 Sim = Similar;
+             else
+                 Sim = NonSimilar;
+             int M1, M2, M3;
+             M1 = Matrix[j - 1, i - 1].CellScore + Sim;
+             M2 = Matrix[j, i - 1].CellScore + Gap;
+             M3 = Matrix[j - 1, i].CellScore + Gap;
+        
+             int max = M1 >= M2 ? M1 : M2;
+             int Mmax = M3 >= max ? M3 : max;
+             if (Mmax == M1)
+             { Temp = new Cell(j, i, M1, Matrix[j - 1, i - 1], Cell.PrevcellType.Diagonal); }
+             else
+             {
+                 if (Mmax == M2)
+                 { Temp = new Cell(j, i, M2, Matrix[j, i - 1], Cell.PrevcellType.Left); }
+                 else
+                 {
+                     if (Mmax == M3)
+                     { Temp = new Cell(j, i, M3, Matrix[j - 1, i], Cell.PrevcellType.Above); }
+                 }
+             }
+        
+             return Temp;
+         }
   }
