@@ -6,8 +6,7 @@ using System.Text;
 namespace DNA_Sequence_Alignment_Using_Dynamic_Programming_
 {
 
-    //Coding By Sara El-Sayed El-Metwally @ Monday,19-12-2011, 9:00 pm
-    // Teaching Assistant ,Mansoura University ,Eygpt 
+    
     class Cell
     {
         private Cell Prevoius_Cell;
