@@ -13,9 +13,9 @@ This project implements DNA sequence alignment using Dynamic Programming (DP), s
 
 ## Technologies Used
 
-C#: The application is developed using C# programming language.
-Windows Forms: Provides the GUI for the application.
-Dynamic Programming: Used to calculate the optimal alignment of two DNA sequences.
+- C#: The application is developed using C# programming language.
+- Windows Forms: Provides the GUI for the application.
+- Dynamic Programming: Used to calculate the optimal alignment of two DNA sequences.
 
 ### Installation
 
