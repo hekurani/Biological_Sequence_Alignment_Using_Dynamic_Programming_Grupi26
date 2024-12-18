@@ -74,4 +74,37 @@ namespace DNA_Sequence_Alignment_Using_Dynamic_Programming_
         
              return Temp;
          }
+        
+        public static void Traceback_Step(Cell[,] Matrix, string Sq1, string Sq2, List<char> Seq1, List<char> Seq2)
+        {
+        
+            Cell CurrentCell = Matrix[Sq2.Length - 1, Sq1.Length - 1];
+        
+        
+            while (CurrentCell.CellPointer != null)
+            {
+                if (CurrentCell.Type == Cell.PrevcellType.Diagonal)
+                {
+        
+                    Seq1.Add(Sq1[CurrentCell.CellColumn]);
+                    Seq2.Add(Sq2[CurrentCell.CellRow]);
+        
+                }
+                if (CurrentCell.Type == Cell.PrevcellType.Left)
+                {
+                    Seq1.Add(Sq1[CurrentCell.CellColumn]);
+                    Seq2.Add('-');
+        
+                }
+                if (CurrentCell.Type == Cell.PrevcellType.Above)
+                {
+                    Seq1.Add('-');
+                    Seq2.Add(Sq2[CurrentCell.CellRow]);
+        
+                }
+        
+                CurrentCell = CurrentCell.CellPointer;
+        
+            }     
+        }
   }
